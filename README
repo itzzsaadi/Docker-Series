@@ -1,0 +1,125 @@
+# Connect with me on Linkedin https://www.linkedin.com/in/saad-naseer-b66ba617b/
+# MySQL + phpMyAdmin Docker Setup
+
+A simple Docker Compose setup for running MySQL database with phpMyAdmin web interface.
+
+## 📋 Description
+
+This project provides a containerized MySQL database server with phpMyAdmin for easy database management through a web interface. Perfect for development, testing, or learning purposes.
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Docker installed on your system
+- Docker Compose installed
+
+### Installation & Usage
+
+1. **Clone or download this repository**
+   ```bash
+   git clone <your-repo-url>
+   cd <repo-directory>
+   ```
+
+2. **Start the services**
+   ```bash
+   docker-compose up -d
+   ```
+
+3. **Access phpMyAdmin**
+   - Open your browser and go to: `http://localhost:8080`
+   - Login credentials:
+     - **Username:** `root`
+     - **Password:** `saad`
+
+4. **Connect to MySQL directly** (optional)
+   ```bash
+   mysql -h 127.0.0.1 -P 3306 -u root -p
+   # Enter password: saad
+   ```
+
+## 🛠️ Configuration
+
+### Services
+
+| Service | Port | Description |
+|---------|------|-------------|
+| MySQL | 3306 | Database server |
+| phpMyAdmin | 8080 | Web-based database management |
+
+### Environment Variables
+
+**MySQL (db service):**
+- `MYSQL_ROOT_PASSWORD`: Root user password (default: `saad`)
+- `MYSQL_DATABASE`: Default database name (default: `mydb`)
+
+**phpMyAdmin:**
+- `PMA_HOST`: MySQL host service name (default: `db`)
+- `MYSQL_ROOT_PASSWORD`: Must match MySQL root password
+
+## 📁 Default Database
+
+A database named `mydb` is automatically created on first startup.
+
+## 💾 Data Persistence (Optional)
+
+To persist your data between container restarts, uncomment the volumes section in `docker-compose.yml`:
+
+```yaml
+volumes:
+  - mysql_data:/var/lib/mysql
+
+# Add at the bottom of the file:
+volumes:
+  mysql_data:
+```
+
+## 🔧 Common Commands
+
+**Start services:**
+```bash
+docker-compose up -d
+```
+
+**Stop services:**
+```bash
+docker-compose down
+```
+
+**View logs:**
+```bash
+docker-compose logs -f
+```
+
+**Restart services:**
+```bash
+docker-compose restart
+```
+
+**Stop and remove all data:**
+```bash
+docker-compose down -v
+```
+
+## ⚠️ Important Notes
+
+- **Security:** This setup uses simple passwords for demonstration. Change them for production use!
+- **Port conflicts:** Ensure ports 3306 and 8080 are not already in use on your system
+- **Data loss:** Without volumes configured, all data is lost when containers are removed
+
+## 🔐 Security Recommendations
+
+For production environments:
+1. Change default passwords
+2. Use environment files (`.env`) for sensitive data
+3. Enable data persistence with volumes
+4. Restrict network access
+5. Use specific version tags instead of `latest`
+
+## 📝 License
+
+This project is open source and available for educational purposes.
+
+## 🤝 Contributing
+
+Feel free to submit issues or pull requests for improvements!
