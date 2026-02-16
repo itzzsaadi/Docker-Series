@@ -16,8 +16,8 @@ This project provides a containerized MySQL database server with phpMyAdmin for 
 
 1. **Clone or download this repository**
    ```bash
-   git clone <your-repo-url>
-   cd <repo-directory>
+   git clone https://github.com/itzzsaadi/Docker-Series/
+   cd Docker-Series
    ```
 
 2. **Start the services**
@@ -37,7 +37,7 @@ This project provides a containerized MySQL database server with phpMyAdmin for 
    # Enter password: saad
    ```
 
-## 🛠️ Configuration
+## Configuration
 
 ### Services
 
@@ -73,7 +73,7 @@ volumes:
   mysql_data:
 ```
 
-## 🔧 Common Commands
+## Common Commands
 
 **Start services:**
 ```bash
