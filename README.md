@@ -16,7 +16,7 @@ This project provides a containerized MySQL database server with phpMyAdmin for 
 
 1. **Clone or download this repository**
    ```bash
-   git clone https://github.com/itzzsaadi/Docker-Series/
+   git clone https://github.com/itzzsaadi/Docker-Series.git/
    cd Docker-Series
    ```
 
