@@ -2,11 +2,11 @@
 
 A simple Docker Compose setup for running MySQL database with phpMyAdmin web interface.
 
-## 📋 Description
+## Description
 
 This project provides a containerized MySQL database server with phpMyAdmin for easy database management through a web interface. Perfect for development, testing, or learning purposes.
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 - Docker installed on your system
@@ -56,11 +56,11 @@ This project provides a containerized MySQL database server with phpMyAdmin for 
 - `PMA_HOST`: MySQL host service name (default: `db`)
 - `MYSQL_ROOT_PASSWORD`: Must match MySQL root password
 
-## 📁 Default Database
+## Default Database
 
 A database named `mydb` is automatically created on first startup.
 
-## 💾 Data Persistence (Optional)
+## Data Persistence (Optional)
 
 To persist your data between container restarts, uncomment the volumes section in `docker-compose.yml`:
 
@@ -100,13 +100,13 @@ docker-compose restart
 docker-compose down -v
 ```
 
-## ⚠️ Important Notes
+## Important Notes
 
 - **Security:** This setup uses simple passwords for demonstration. Change them for production use!
 - **Port conflicts:** Ensure ports 3306 and 8080 are not already in use on your system
 - **Data loss:** Without volumes configured, all data is lost when containers are removed
 
-## 🔐 Security Recommendations
+## Security Recommendations
 
 For production environments:
 1. Change default passwords
@@ -115,10 +115,10 @@ For production environments:
 4. Restrict network access
 5. Use specific version tags instead of `latest`
 
-## 📝 License
+## License
 
 This project is open source and available for educational purposes.
 
-## 🤝 Contributing
+## Contributing
 
 Feel free to submit issues or pull requests for improvements!
